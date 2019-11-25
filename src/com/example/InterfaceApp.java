@@ -7,7 +7,7 @@ import java.io.IOException;
 import java.sql.SQLException;
 import java.util.Scanner;
 
-class Interface {
+class InterfaceApp {
 
     static void main() throws IOException, SQLException {
 

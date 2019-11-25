@@ -22,9 +22,9 @@ public class CopyFromALL {
         Connection ctDbPostgres2;
 
         String sql = "INSERT INTO postgres2.public.table_name  (id,column_2,column_3,column_4,column_5)"
-                + "VALUES(?,?,?,?,?)" +
-                "ON CONFLICT (id) DO NOTHING ";
-        String sql2="SELECT *FROM postgres.public.table_name";
+                     + "VALUES(?,?,?,?,?)" +
+                     "ON CONFLICT (id) DO NOTHING ";
+        String sql2 = "SELECT *FROM postgres.public.table_name";
 
         ctDbPostgres = connectFromDb.connect("demo");
 
@@ -34,9 +34,6 @@ public class CopyFromALL {
                 .executeQuery(sql2);
 
         ctDbPostgres2 = connectFromDb.connect("demo2");
-
-
-
 
         PreparedStatement preparedStatement = ctDbPostgres2.prepareStatement(sql);
         try {
